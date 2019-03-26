@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="709.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <LineChart fx:id="chart" axisSortingPolicy="NONE" createSymbols="false" layoutX="-52.0" layoutY="-14.0" legendVisible="false" prefHeight="400.0" prefWidth="546.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="0.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <TableView fx:id="primaryTableView" layoutX="563.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="x0" fx:id="xColumn" />
+          <TableColumn fx:id="yColumn" prefWidth="75.0" text="y0" />
+            <TableColumn fx:id="dotsAmountColumn" prefWidth="75.0" text="Узлов" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="563.0" layoutY="234.0" text="Узлы:" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="234.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="604.0" layoutY="229.0" prefHeight="25.0" prefWidth="75.0" promptText="x" AnchorPane.rightAnchor="98.0" fx:id="xField">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="yField" layoutX="688.0" layoutY="229.0" prefHeight="25.0" prefWidth="75.0" promptText="y" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="229.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="563.0" layoutY="268.0" text="Кол-во узлов:" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="268.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="688.0" layoutY="266.0" minWidth="30.0" mnemonicParsing="false" onAction="#removeDots" text="-" AnchorPane.rightAnchor="59.0" AnchorPane.topAnchor="266.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="733.0" layoutY="266.0" minWidth="30.0" mnemonicParsing="false" onAction="#addDots" text="+" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="266.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="563.0" layoutY="349.0" minWidth="120.0" mnemonicParsing="false" onAction="#deleteGraph" prefHeight="30.0" prefWidth="200.0" text="Удалить граф" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="349.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="563.0" layoutY="310.0" minWidth="120.0" mnemonicParsing="false" onAction="#createGraph" prefHeight="30.0" prefWidth="200.0" text="Добавить граф" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="310.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="secondaryTableView" layoutX="563.0" layoutY="389.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="389.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="x0" fx:id="xColumn1" />
+            <TableColumn fx:id="yColumn1" prefWidth="75.0" text="y0" />
+            <TableColumn fx:id="dotsAmountColumn1" prefWidth="75.0" text="Узлов" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="563.0" layoutY="641.0" minWidth="120.0" mnemonicParsing="false" onAction="#removeGraph" prefHeight="30.0" prefWidth="200.0" text="Деактивировать граф" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="641.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="563.0" layoutY="602.0" minWidth="120.0" mnemonicParsing="false" onAction="#addGraph" prefHeight="30.0" prefWidth="200.0" text="Активировать граф" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="602.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
